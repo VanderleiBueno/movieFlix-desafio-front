@@ -1,0 +1,59 @@
+.form-container {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.card-container1 {
+  margin-bottom: 10px;
+}
+
+.card-container2 {
+  padding: 5px;
+}
+
+.card-container1 h1 {
+  padding: 10px;
+  font-size: 1em;
+}
+
+.card-container1 h3 {
+  padding: 10px;
+  font-size: 0.6em;
+}
+
+.card-container2 h1 {
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+.card-container2 h3 {
+  padding: 5px;
+  font-size: 0.6em;
+  color: #9e9e9e;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+@media (min-width: 576px) {
+  .form-container {
+    padding: 40px;
+  }
+  .card-container1 {
+    padding: 20px;
+  }
+  .card-container2 {
+    padding: 20px;
+  }
+  .card-container2 h3 {
+    height: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-container1 h1 {
+    font-size: 1.8em;
+  }
+  .card-container2 {
+    padding: 30px;
+  }
+}

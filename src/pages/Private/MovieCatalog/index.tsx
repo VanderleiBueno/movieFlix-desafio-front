@@ -4,7 +4,7 @@ import './styles.css';
 
 const MovieCatalog = () => {
   return (
-    <div className="films-container">
+    <div className="base-home films-container">
       <div className="column">
         <div>
           <h1>Tela listagem de filmes</h1>

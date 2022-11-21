@@ -53,7 +53,7 @@ const Login = () => {
   };
 
   return (
-      <div className="login-card">
+      <div className="base-card login-card">
         <h1>LOGIN</h1>
         {hasError && (
           <div className="alert alert-danger">

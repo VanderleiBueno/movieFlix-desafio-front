@@ -2,16 +2,21 @@
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  background-color: #525252;
 }
 
 .banner-container {
   display: none;
 }
 
+@media (min-width: 576px) {
+  .login-container {
+    padding: 40px 40px 50px;
+  }
+}
+
 @media (min-width: 1200px) {
   .login-container {
-    padding: 40px;
+    padding: 80px;
   }
 
   .banner-container {

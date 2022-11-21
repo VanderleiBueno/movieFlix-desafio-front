@@ -4,7 +4,7 @@ import './styles.css';
 
 const Home = () => {
   return (
-    <div className="login-container">
+    <div className="base-home login-container">
       <div className="banner-container">
         <h1>Avalie Filmes</h1>
         <p>Diga o que você achou do seu filme favorito</p>

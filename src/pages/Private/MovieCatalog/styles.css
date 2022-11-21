@@ -1,0 +1,34 @@
+.films-container {
+  
+  height: 500px;
+  font-size: 20px;
+}
+
+.films-container h1 {
+  padding: 10px;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.films-link {
+  display: flex;
+  color: #fff;
+  font-weight: 400;
+  padding: 20px;
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .films-container {
+    height: 650px;
+    font-size: 30px;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+    .films-container {
+      font-size: 48px;
+      padding: 50px;
+    }
+  }
