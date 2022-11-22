@@ -8,16 +8,20 @@
 }
 
 .nav-login-logout {
-    width: 60px;
-    font-weight: 700;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    margin-right: 10px;
+  width: 60px;
+  font-weight: 700;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 .nav-login-logout a {
   display: flex;
   justify-content: center;
+}
+
+.nav-login-logout {
+  display: none;
 }
 
 .nav-username {
@@ -26,6 +30,7 @@
 
 @media (min-width: 768px) {
   .nav-login-logout {
+    display: unset;
     width: 100px;
     margin-right: 30px;
   }

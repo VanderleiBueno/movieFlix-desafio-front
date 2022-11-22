@@ -1,5 +1,6 @@
 import { ReactComponent as Star } from 'assets/images/star.svg';
 import { AxiosRequestConfig } from 'axios';
+import ReviewForm from 'components/ReviewForm';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Review } from 'type/review';
@@ -31,8 +32,7 @@ return (
       <div className="base-home form-container">
         <div className="base-card card-container1">
           <h1>Tela detalhes do filme id: {movieId}</h1>
-          <h3>Campo de input para salvar reviews</h3>
-          <button>SALVAR</button>
+          <ReviewForm movieId={movieId} />
         </div>
         <div className="base-card card-container2">
           {reviews.map((reviews) => (
