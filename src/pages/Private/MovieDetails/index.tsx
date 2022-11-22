@@ -4,6 +4,7 @@ import ReviewForm from 'components/ReviewForm';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Review } from 'type/review';
+import { hasAnyRoles } from 'util/auth';
 import { requestBackend } from 'util/requests';
 import './styles.css';
 
@@ -27,15 +28,23 @@ const MovieDetails = () => {
     });
   }, [movieId]);
 
+  const handleInsertReview = (review: Review) => {
+    const clone = [...reviews];
+    clone.push(review);
+    setReviews(clone);
+  };
+
 return (
     <>
       <div className="base-home form-container">
         <div className="base-card card-container1">
           <h1>Tela detalhes do filme id: {movieId}</h1>
-          <ReviewForm movieId={movieId} />
+          {hasAnyRoles(['ROLE_MEMBER']) && (
+            <ReviewForm movieId={movieId} onInsertReview={handleInsertReview} />
+          )}
         </div>
         <div className="base-card card-container2">
-          {reviews.map((reviews) => (
+          {reviews?.map((reviews) => (
             <div className="reviews-container" key={reviews.id}>
               <h1>{<Star />}{" " + reviews.user.name}</h1>
               <h3>{reviews.text}</h3>
