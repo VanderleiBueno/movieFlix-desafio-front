@@ -1,8 +1,8 @@
-.card-form-container {
+.review-form card-container {
   padding: 5px;
 }
 
-.input-container {
+.review-form-input-container {
   display: flex;
   flex-direction: column;
   padding: 5px;
@@ -10,8 +10,11 @@
   color: #9e9e9e;
 }
 
-.login-submit {
+.review-form-login-submit {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 50px;
 }

@@ -48,9 +48,9 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
 
   return (
     <div>
-      <div className="card-form-container">
+      <div className="review-form-card-container">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-container">
+          <div className="review-form-input-container">
             <input
               {...register('text', {
                 required: 'Campo obrigatório',
@@ -62,7 +62,7 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
           </div>
           <div>{errors.text?.message}</div>
           <div>
-            <div className="login-submit">
+            <div className="review-form-login-submit">
               <ButtonIcon text="Salvar Avaliação" />
             </div>
           </div>
