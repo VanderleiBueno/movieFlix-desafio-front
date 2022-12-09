@@ -80,17 +80,17 @@ const MovieCatalog = () => {
   }, [getProducts]);
 
   return (
-    <div  className="base-home product-crud-container">
-      <div className="product-crud-bar-container">
+    <div  className="base-home movies-crud-container">
+      <div className="movies-crud-bar-container">
         <GenreFilter onSubmitFilter={handleSubmitFilter}/>
       </div>
-      <div className="row">
+      <div className="row movies-crud-movies-container">
           {page?.content.map(movie => (
-          <div key={movie.id} className="col-sm-6 col-md-6 col-xl-3">
+          <div key={movie.id} className="base-card movies-crud-movie-container col-sm-6 col-md-6 col-xl-3">
             <img src={movie.imgUrl} alt={movie.title} />
             <h1>{movie.title}</h1>
             <h3>{movie.year}</h3>
-            <h3>{movie.subTitle}</h3>
+            <h4>{movie.subTitle}</h4>
           </div>
           ))}
       </div>

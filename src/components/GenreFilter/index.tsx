@@ -44,9 +44,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
   return (
     <div className="base-card product-filter-container">
       <form onSubmit={handleSubmit(onSubmit)} className="product-filter-form">
-
         <div className="product-filter-bottom-container">
-          <div className="product-filter-genre-container">
             <Controller
               name="genre"
               control={control}
@@ -63,7 +61,6 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
                 />
               )}
             />
-          </div>
         </div>
       </form>
     </div>
