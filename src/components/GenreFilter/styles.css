@@ -5,20 +5,7 @@
 
 .product-filter-bottom-container {
   display: flex;
-}
-
-.product-filter-genre-container {
-  width: 260px;
-  margin-right: 10px;
-}
-
-.btn-product-filter-clear {
-  font-weight: bold;
-  border-radius: 10px;
-}
-
-.btn-product-filter-word {
-  display: none;
+  width: 100%;
 }
 
 .product-filter-select__control {
@@ -34,7 +21,7 @@
   color: #FFFFFF !important;
 }
 
-.product-filter-select__input-container {
+.product-filter-select__input {
   color: #FFFFFF !important;
 }
 

@@ -1,30 +1,3 @@
-/*import { Link } from 'react-router-dom';
-
-import './styles.css';
-
-const MovieCatalog = () => {
-  return (
-    <div className="base-home films-container">
-      <div className="column">
-        <div>
-          <h1>Tela listagem de filmes</h1>
-        </div>
-        <div>
-          <Link to="/movies/1" className="films-link">
-            Acessar /movies/movies1
-          </Link>
-        </div>
-        <div>
-          <Link to="/movies/2" className="films-link">
-            Acessar /movies/movies2
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-};
-*/
-
 import { AxiosRequestConfig } from 'axios';
 import Pagination from 'components/Pagination';
 import GenreFilter, { GenreFilterData } from 'components/GenreFilter';
@@ -34,6 +7,7 @@ import { SpringPage } from 'type/vendor/spring';
 import { requestBackend } from 'util/requests';
 
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 type ControlComponentsData = {
   activePage: number;
@@ -86,9 +60,11 @@ const MovieCatalog = () => {
       </div>
       <div className="row movies-crud-movies-container">
           {page?.content.map(movie => (
-          <div key={movie.id} className="base-card movies-crud-movie-container col-sm-6 col-md-6 col-xl-3">
+          <div key={movie.id} className="base-card movies-crud-movie-container col-sm-6 col-xl-3">
             <img src={movie.imgUrl} alt={movie.title} />
+            <Link to={`/movies/${movie.id}`}>
             <h1>{movie.title}</h1>
+            </Link>
             <h3>{movie.year}</h3>
             <h4>{movie.subTitle}</h4>
           </div>
