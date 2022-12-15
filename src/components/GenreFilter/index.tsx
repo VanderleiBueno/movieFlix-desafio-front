@@ -14,7 +14,7 @@ type Props = {
   onSubmitFilter: (data: GenreFilterData) => void;
 };
 
-const ProductFilter = ({ onSubmitFilter }: Props) => {
+const GenreFilter = ({ onSubmitFilter }: Props) => {
   const [selectCategories, setSelectCategories] = useState<Genre[]>([]);
 
   const { handleSubmit, setValue, getValues, control, } =
@@ -42,9 +42,8 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
   }, []);
 
   return (
-    <div className="base-card product-filter-container">
-      <form onSubmit={handleSubmit(onSubmit)} className="product-filter-form">
-        <div className="product-filter-bottom-container">
+    <div className="base-card genre-filter-container">
+      <form onSubmit={handleSubmit(onSubmit)} className="genre-filter-form">
             <Controller
               name="genre"
               control={control}
@@ -54,17 +53,16 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
                   options={selectCategories}
                   isClearable
                   placeholder="Genero"
-                  classNamePrefix="product-filter-select"
+                  classNamePrefix="genre-filter-select"
                   onChange={(value) => handleChangeCategory(value as Genre)}
                   getOptionLabel={(genre: Genre) => genre.name}
                   getOptionValue={(genre: Genre) => String(genre.id)}
                 />
               )}
             />
-        </div>
       </form>
     </div>
   );
 };
 
-export default ProductFilter;
+export default GenreFilter;

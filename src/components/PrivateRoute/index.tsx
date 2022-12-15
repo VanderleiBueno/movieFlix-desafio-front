@@ -19,7 +19,7 @@ const PrivateRoute = ({ children, path }: Props) => {
             }}
           />
         ) : (
-          children
+          <>{children}</>
         )
       }
     />

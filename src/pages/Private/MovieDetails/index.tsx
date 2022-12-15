@@ -50,31 +50,29 @@ const MovieDetails = () => {
 
   return (
     <>
-      <div className="product-details-container">
-        <div className="base-card product-details-card">
-
+      <div className="base-home movie-details-container">
+        <div className="base-card movie-details-card">
           <div className="row">
             <div className="col-xl-6">
-                  <div className="img-container">
-                    <img src={movie?.imgUrl} alt={movie?.title} />
-                  </div>
-                  <div className="name-price-container">
-                    <h1>{movie?.title}</h1>
-                    <h3>{movie?.year}</h3>
-                    <h4>{movie?.subTitle}</h4>
-                  </div>
+              <div className="movie-details-img-container">
+                <img src={movie?.imgUrl} alt={movie?.title} />
+              </div>
             </div>
             <div className="col-xl-6">
-                <div className="description-container">
-                  <p>{movie?.synopsis}</p>
-                </div>
+              <div className="movie-details-text-container">
+                <h1>{movie?.title}</h1>
+                <h3>{movie?.year}</h3>
+                <h4>{movie?.subTitle}</h4>
+              </div>
+              <div className="movie-details-description-container">
+                <p>{movie?.synopsis}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div className="base-home form-container">
         <div className="base-card card-container1">
-          <h1>Tela detalhes do filme id: {movieId}</h1>
           {hasAnyRoles(['ROLE_MEMBER']) && (
             <ReviewForm movieId={movieId} onInsertReview={handleInsertReview} />
           )}

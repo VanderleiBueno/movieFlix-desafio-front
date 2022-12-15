@@ -39,3 +39,23 @@
     padding: 20px;
   }
 }
+
+@media (min-width: 1200px) {
+  .movies-crud-bar-container {
+    padding: 30px 40px 5px;
+    margin: 0;
+  }
+  .movies-crud-movies-container {
+    padding: 30px 40px 5px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .movies-crud-bar-container {
+    padding: 40px 50px 10px;
+  }
+  .movies-crud-movies-container {
+    padding: 40px 50px 10px;
+  }
+}
